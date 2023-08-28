@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -15,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -25,6 +27,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -78,22 +81,62 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         ) {
             Row(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color.Blue),
+                    .fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center
+                horizontalArrangement = Arrangement.SpaceAround
             ) {
                 Row(
                     modifier = Modifier.padding(8.dp),
                 ) {
-                    Text(text = "jfndjchfdcm")
+                    Text(text = "Todos")
                 }
                 Row(
                     modifier = Modifier.padding(8.dp),
                 ) {
-                    Text(text = "jfndjchfdcm")
+                    Text(text = "Favoritos")
                 }
             }
+
+            Row(modifier = Modifier
+                .fillMaxWidth()
+                .background(Color(209, 209, 214))) {
+                Column(
+                    modifier = Modifier
+                        .width(93.dp)
+                        .height(3.2.dp)
+                        .background(
+                            Color(182, 182, 246),
+                            shape = RoundedCornerShape(
+                                topStart = 2.dp,
+                                topEnd = 2.dp,
+                                bottomStart = 2.dp,
+                                bottomEnd = 2.dp
+                            )
+                        )
+
+                ) {
+
+                }
+
+                Column(
+                    modifier = Modifier
+                        .width(100.dp)
+                        .height(3.2.dp)
+                        .background(
+                            Color(182, 182, 246),
+                            shape = RoundedCornerShape(
+                                topStart = 2.dp,
+                                topEnd = 2.dp,
+                                bottomStart = 2.dp,
+                                bottomEnd = 2.dp
+                            )
+                        )
+
+                ) {
+
+                }
+            }
+
 
         }
         Row(
@@ -107,7 +150,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     .padding(vertical = 9.dp, horizontal = 4.dp),
                 colors = CardDefaults.cardColors(Color.Yellow),
                 shape = RoundedCornerShape(50.dp)
-                ){}
+                ){
+            }
 
             Card(
                 modifier = Modifier
