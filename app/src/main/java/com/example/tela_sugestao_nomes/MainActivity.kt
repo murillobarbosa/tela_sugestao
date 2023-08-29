@@ -8,6 +8,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -148,20 +149,383 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .size(width = 120.dp, height = 60.dp)
                     .padding(vertical = 9.dp, horizontal = 4.dp),
-                colors = CardDefaults.cardColors(Color.Yellow),
-                shape = RoundedCornerShape(50.dp)
+                colors = CardDefaults.cardColors(Color.White),
+                shape = RoundedCornerShape(50.dp),
+                border = BorderStroke(width = 2.dp ,Color(182,182,246))
                 ){
+                Image(
+                    modifier = Modifier.align(alignment = Alignment.CenterHorizontally,),
+                    painter = painterResource(id = R.drawable.gender_baixo),
+                    contentDescription = null
+                )
             }
 
             Card(
                 modifier = Modifier
                     .size(width = 120.dp, height = 60.dp)
                     .padding(vertical = 9.dp, horizontal = 4.dp),
-                colors = CardDefaults.cardColors(Color.Yellow),
+                colors = CardDefaults.cardColors(Color(182,182,246)),
                 shape = RoundedCornerShape(50.dp)
-            ){}
+            ){
+                Image(
+                    modifier = Modifier.align(alignment = Alignment.CenterHorizontally,),
+                    painter = painterResource(id = R.drawable.gender_cima),
+                    contentDescription = null
+                )
+            }
         }
 
+        Spacer(modifier = Modifier.height(5.dp))
+
+        Row(
+            modifier = Modifier
+                .padding(start = 15.dp),
+            horizontalArrangement = Arrangement.Start,
+            verticalAlignment = Alignment.CenterVertically
+        ){
+            Card(
+                modifier = Modifier
+                    .size(width = 60.dp, height = 50.dp)
+                    .padding(vertical = 9.dp, horizontal = 4.dp),
+                colors = CardDefaults.cardColors(Color(182, 182, 246)),
+                shape = RoundedCornerShape(50.dp),
+            ) {
+                Box(
+                    contentAlignment = Alignment.Center,
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    Text(
+                        text = "A",
+                        color = Color.White,
+                        fontSize = 20.sp
+                    )
+                }
+            }
+
+        }
+        Spacer(modifier = Modifier.height(5.dp))
+
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Card(
+                modifier = Modifier.size(width = 350.dp, height = 130.dp),
+                colors = CardDefaults.cardColors(Color.White),
+                shape = RoundedCornerShape(20.dp)
+            ){
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_cinza),
+                            contentDescription = null
+                        )
+                    }
+
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_cinza),
+                            contentDescription = null
+                        )
+
+                    }
+
+                }
+
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_roxo),
+                            contentDescription = null
+                        )
+                    }
+
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_cinza),
+                            contentDescription = null
+                        )
+
+                    }
+
+                }
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_cinza),
+                            contentDescription = null
+                        )
+                    }
+
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_roxo),
+                            contentDescription = null
+                        )
+
+                    }
+
+                }
+
+            }
+        }
+
+        Spacer(modifier = Modifier.height(5.dp))
+
+        Row(
+            modifier = Modifier
+                .padding(start = 15.dp),
+            horizontalArrangement = Arrangement.Start,
+            verticalAlignment = Alignment.CenterVertically
+        ){
+            Card(
+                modifier = Modifier
+                    .size(width = 60.dp, height = 50.dp)
+                    .padding(vertical = 9.dp, horizontal = 4.dp),
+                colors = CardDefaults.cardColors(Color(182, 182, 246)),
+                shape = RoundedCornerShape(50.dp),
+            ) {
+                Box(
+                    contentAlignment = Alignment.Center,
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    Text(
+                        text = "B",
+                        color = Color.White,
+                        fontSize = 20.sp
+                    )
+                }
+            }
+
+        }
+
+        Spacer(modifier = Modifier.height(5.dp))
+
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Card(
+                modifier = Modifier.size(width = 350.dp, height = 130.dp),
+                colors = CardDefaults.cardColors(Color.White),
+                shape = RoundedCornerShape(20.dp)
+            ){
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_cinza),
+                            contentDescription = null
+                        )
+                    }
+
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_roxo),
+                            contentDescription = null
+                        )
+
+                    }
+
+                }
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_roxo),
+                            contentDescription = null
+                        )
+                    }
+
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_roxo),
+                            contentDescription = null
+                        )
+
+                    }
+
+                }
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_cinza),
+                            contentDescription = null
+                        )
+                    }
+
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_cinza),
+                            contentDescription = null
+                        )
+
+                    }
+
+                }
+
+            }
+        }
+
+        Spacer(modifier = Modifier.height(5.dp))
+
+        Row(
+            modifier = Modifier
+                .padding(start = 15.dp),
+            horizontalArrangement = Arrangement.Start,
+            verticalAlignment = Alignment.CenterVertically
+        ){
+            Card(
+                modifier = Modifier
+                    .size(width = 60.dp, height = 50.dp)
+                    .padding(vertical = 9.dp, horizontal = 4.dp),
+                colors = CardDefaults.cardColors(Color(182, 182, 246)),
+                shape = RoundedCornerShape(50.dp),
+            ) {
+                Box(
+                    contentAlignment = Alignment.Center,
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    Text(
+                        text = "C",
+                        color = Color.White,
+                        fontSize = 20.sp
+                    )
+                }
+            }
+
+        }
+        Spacer(modifier = Modifier.height(5.dp))
+
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Card(
+                modifier = Modifier.size(width = 350.dp, height = 60.dp),
+                colors = CardDefaults.cardColors(Color.White),
+                shape = RoundedCornerShape(20.dp)
+            ){
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_cinza),
+                            contentDescription = null
+                        )
+                    }
+
+                    Row(modifier = Modifier.padding(top = 10.dp)) {
+                        Text(
+                            text = "Alessandro",
+                            fontSize = 20.sp
+                        )
+                        Image(
+                            modifier = Modifier.padding(top = 3.dp),
+                            painter = painterResource(id = R.drawable.coracao_roxo),
+                            contentDescription = null
+                        )
+                    }
+                }
+            }
+        }
     }
 }
 
